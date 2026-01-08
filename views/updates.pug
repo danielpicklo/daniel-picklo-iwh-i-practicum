@@ -1,0 +1,34 @@
+doctype html
+html 
+head 
+    title= `${title}`
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+body    
+    h1 Create a New Guitar
+    form(action="/update-cobj" method="POST")
+        label(for="serial") Serial Number:
+        input(type="text" name="serial" required)
+        br
+        label(for="name") Name:
+        input(type="text" name="name")
+        br
+        label(for="style") Style:
+        select(name="style")
+            option(value="Strat") Strat
+            option(value="Tele") Tele
+            option(value="SG") SG
+            option(value="SG") LP
+            option(value="Iceman") Iceman
+            option(value="Other") Other
+        br
+        label(for="tuning") Tuning:
+        select(name="tuning")
+            option(value="E-standard/Drop D") E-standard/Drop D
+            option(value="D-standard/Drop C") D-standard/Drop C
+            option(value="B-standard/Drop A") B-standard/Drop A
+            option(value="F#-standard/Drop E") F#-standard/Drop E
+        br
+        button(type="submit") Create New Guitar
+    br
+    a(href="/") Return to the homepage

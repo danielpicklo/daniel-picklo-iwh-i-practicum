@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Custom Object Table
+        a(href="/update-cobj") Add to this table
+        table(border="1")
+            thead
+                tr
+                    th Serial Number
+                    th Name
+                    th Style
+                    th Tuning
+            tbody
+                each guitar in data
+                    tr
+                        td #{guitar.properties.serial}
+                        td #{guitar.properties.name}
+                        td #{guitar.properties.style}
+                        td #{guitar.properties.tuning}
